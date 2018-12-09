@@ -1,0 +1,112 @@
+<!--
+<div class="container">
+    <div class="container-fluid">
+        <h3>Login Influencer</h3>
+        <div class="page-header">
+            
+            <form (ngSubmit)="login()">
+            <div class="card">
+                <div class="card-header">
+                    Login Inlfuencer
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Email:</label>
+                        <div class="col-lg-8">
+                            <input type="text" 
+                            name="email"
+                            [(ngModel)]="loginData.email"
+                            class="form-control" placeholder="Email">
+                        </div>
+                        
+                        <div class="col-lg-8" *ngIf="loginError.email">
+                                <span class="text text-danger">
+                                    {{loginError.email}}
+                                </span>
+                            </div>
+                       
+                    </div>
+                    <div class="form-group">
+                        <label class="col-lg-3 control-label">Password:</label>
+                        <div class="col-lg-8">
+                            <input type="password"
+                            name="password"
+                            [(ngModel)]="loginData.password"
+                            class="form-control" placeholder="Password">
+                        </div>
+                        
+                        <div class="col-lg-8" *ngIf="loginError.password">
+                            <span class="text text-danger">
+                                {{loginError.password}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info">Login</button>&nbsp;
+                    <a routerLink="/influencer-register" class="btn btn-success">Need Account</a>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+-->
+
+<!--login influencer-->
+<div class="container">
+    <!-- form holder -->
+    <div class="formHolder">
+        <!-- title holder -->
+        <div class="titleHolder">
+        <i class="far fa-user-circle"></i>
+        <h1>Sign in</h1>
+        <p>Login using your username and password</p>
+        </div>
+        <!-- login form -->
+        <form (ngSubmit)="login()" class="loginForm">
+            <div class="row">
+                <input type="text" 
+                [(ngModel)]="loginData.email"
+                name="email"
+                placeholder="email" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <!--validasi error email-->
+            <div class="col-lg-10" *ngIf="loginError.email">
+                <span class="text text-danger">{{loginError.email}}</span>
+              </div>
+            <!--validasi error email-->
+           
+            <div class="row">
+                <input type="password" 
+                name="password"
+                [(ngModel)]="loginData.password"
+                placeholder="Password" required>
+                <i class="fas fa-key"></i>
+            </div>
+            <!--validasi error password-->
+            <div class="col-lg-10" *ngIf="loginError.password">
+                <span class="text text-danger">{{loginError.password}}</span>
+            </div>
+            <!--validasi error password-->
+
+            <div class="row">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn">Login</button>
+            </div>
+            <div class="row">
+                <a href="password.html">Forgot Password ?</a>
+                <br>
+                <br>
+                <a href="register.html">Register as influencer</a>
+                &nbsp; &nbsp;
+                <a href="register.html">Register as marketer</a>
+            </div>
+        </form>
+    </div>
+</div>
+<!--login influencer-->

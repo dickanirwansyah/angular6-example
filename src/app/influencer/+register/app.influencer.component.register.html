@@ -1,0 +1,122 @@
+<!--
+<div class="container">
+    <div class="container-fluid">
+
+        validation if user already exists
+        <div class="alert alert-danger col-lg-10" *ngIf="isIfluencerIsExists">
+            <p>sorry user is already exists.</p>
+        </div>
+        validation if user already exists
+
+        <h3>Register Influencer</h3>
+        <div class="page-header">
+            <form (ngSubmit)="createInfluencer()">
+                <div class="card">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Email:</label>
+                            <div class="col-lg-7">
+                                <input type="text" name="requestEmail" [(ngModel)]="influencer.requestEmail" class="form-control"
+                                    placeholder="Email">
+                            </div>
+                            <div class="col-lg-7" *ngIf="influencerError.requestEmail">
+                                <span class="text text-danger">{{influencerError.requestEmail}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Password:</label>
+                            <div class="col-lg-7">
+                                <input type="password" name="requestPasswd" [(ngModel)]="influencer.requestPasswd"
+                                    class="form-control" placeholder="Password">
+                            </div>
+                            <div class="col-lg-7" *ngIf="influencerError.requestPasswd">
+                                <span class="text text-danger">{{influencerError.requestPasswd}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Name:</label>
+                            <div class="col-lg-7">
+                                <input type="text" name="requestName" [(ngModel)]="influencer.requestName" class="form-control"
+                                    placeholder="Name">
+                            </div>
+                            <div class="col-lg-7" *ngIf="influencerError.requestName">
+                                <span class="text text-danger">{{influencerError.requestName}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Nick:</label>
+                            <div class="col-lg-7">
+                                <input type="text" name="requestNick" [(ngModel)]="influencer.requestNick" class="form-control"
+                                    placeholder="Nick">
+                            </div>
+                            <div class="col-lg-7" *ngIf="influencerError.requestNick">
+                                <span class="text text-danger">{{influencerError.requestNick}}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-3 control-label">Address:</label>
+                            <div class="col-lg-7">
+                                <textarea class="form-control" name="requestAddress" [(ngModel)]="influencer.requestAddress"
+                                    placeholder="Address"></textarea>
+                            </div>
+                            <div class="col-lg-7">
+                                <span class="text text-danger">{{influencerError.requestAddress}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success">
+                            Register
+                        </button>&nbsp;
+                        <button type="button" class="btn btn-default">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+-->
+
+<!--example form register-->
+<div class="container">
+    <!-- form holder -->
+    <div class="formHolder">
+        <!-- title holder -->
+        <div class="titleHolder">
+        <i class="far fa-user-circle"></i>
+        <h1>Sign up</h1>
+        <p>It's free and only takes a minute</p>
+        </div>
+        <!-- login form -->
+        <form action="#" class="loginForm">
+            <div class="row">
+                <input type="text" placeholder="Email" required>  
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Username" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="row">
+                <input type="password" placeholder="Password" required>
+                <i class="fas fa-key"></i>
+            </div>
+            <div class="row">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Keep me sign in</label>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn">Register</button>
+            </div>
+            <div class="row">
+                <a href="index.html">Already have an account ? Sign in</a>
+            </div>
+        </form>
+    </div>
+</div>
+<!--example form register-->
